@@ -2,18 +2,16 @@ import React, { Fragment } from 'react';
 
 import { InputLine } from './styles';
 
-function ResultGrid(params) {
+function ResultGrid({ inputs }) {
+  const { entries, services } = inputs;
+
   return (
     <Fragment>
       <InputLine>
-        <input type="text" placeholder="" />
-        <input type="text" placeholder="" />
-        <input type="text" placeholder="" />
+        {entries.map((entry, idx) => <input type="text" key={idx} value={parseFloat(entry).toFixed(2)} readOnly disabled />)}
       </InputLine>
       <InputLine>
-        <input type="text" placeholder="" />
-        <input type="text" placeholder="" />
-        <input type="text" placeholder="" />
+        {services.map((service, idx) => <input type="text" key={idx} value={parseFloat(service).toFixed(2)} readOnly disabled />)}
       </InputLine>
     </Fragment>
   );

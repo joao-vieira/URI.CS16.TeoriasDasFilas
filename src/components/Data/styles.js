@@ -15,15 +15,3 @@ export const InputLine = styled.div`
     text-align: center;
   }
 `;
-
-export const SimulateButton = styled.button `
-  width: 100%;
-  border-radius: 8px;
-  border: none;
-  padding: 2%;
-  margin: 1%;
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
-  background-color: #4CA1AF;
-`;
