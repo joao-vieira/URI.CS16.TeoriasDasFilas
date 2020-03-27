@@ -1,7 +1,6 @@
-import React, { Fragment, useState, useCallback } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import useForm from './utils/useForm';
-import { averageNumber, averageTime, averageRate } from './utils/funcs';
 
 import Container from './components/Container';
 import SimulateButton from './components/SimulateButton';
@@ -13,17 +12,6 @@ import Panels from './components/Panels';
 import GlobalStyle from './styles/global';
 
 function App() {
-  const [newEntries, setNewEntries] = useState({entries: [], services: []});
-  
-  const [result, setResult] = useState(false);
-
-  const calculate = useCallback(() => {
-    console.log('aqui');
-    defineNewEntries();
-  });
-
-  const { inputs, handleInputChange, handleSubmit } = useForm({time: 0, clientsNumber: 0, entryOne: 0, entryTwo: 0, entryThree: 0, serviceOne: 0, serviceTwo: 0, serviceThree: 0}, calculate);
-
   function defineNewEntries() {
     const {time, entryOne, entryTwo, entryThree, serviceOne, serviceTwo, serviceThree} = inputs;
 
@@ -41,6 +29,19 @@ function App() {
     });
   };
 
+  function calculate() {
+    try {
+      defineNewEntries();
+      setShowResult(true);
+    } catch (error) {
+      console.log('E', error);
+    }
+  }
+
+  const { inputs, handleInputChange, handleSubmit } = useForm({time: 0, clientsNumber: 0, entryOne: 0, entryTwo: 0, entryThree: 0, serviceOne: 0, serviceTwo: 0, serviceThree: 0}, calculate);
+  const [newEntries, setNewEntries] = useState({entries: [], services: []});
+  const [showResult, setShowResult] = useState(false);
+
 
   return (
     <Fragment>
@@ -53,12 +54,12 @@ function App() {
         </form>
       </Container>
       {
-        newEntries.entries.length &&
+        showResult &&
           <Container>
             <h2 className="text-center">RESULTADOS</h2>
             <ResultGrid inputs={newEntries} />
             <hr style={{ margin: '2% 0' }} />
-            <Panels />
+            <Panels data={newEntries} clientsNumber={inputs.clientsNumber} />
           </Container>
       }
       <GlobalStyle />

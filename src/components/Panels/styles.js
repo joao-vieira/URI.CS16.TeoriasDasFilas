@@ -11,3 +11,18 @@ export const Panel = styled.div`
   border-radius: 5px;
   padding: 10%;
 `;
+
+export const Table = styled.table`
+  width: 100%;
+
+  thead th {
+    color: #999;
+    text-align: center;
+    padding: 12px;
+  }
+
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #EEE;
+  }
+`;
