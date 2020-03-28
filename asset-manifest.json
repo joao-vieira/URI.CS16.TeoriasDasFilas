@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/URI.CS16.TeoriaDasFilas/static/js/main.652a4771.chunk.js",
+    "main.js.map": "/URI.CS16.TeoriaDasFilas/static/js/main.652a4771.chunk.js.map",
+    "runtime-main.js": "/URI.CS16.TeoriaDasFilas/static/js/runtime-main.cc911ffb.js",
+    "runtime-main.js.map": "/URI.CS16.TeoriaDasFilas/static/js/runtime-main.cc911ffb.js.map",
+    "static/js/2.34c9692a.chunk.js": "/URI.CS16.TeoriaDasFilas/static/js/2.34c9692a.chunk.js",
+    "static/js/2.34c9692a.chunk.js.map": "/URI.CS16.TeoriaDasFilas/static/js/2.34c9692a.chunk.js.map",
+    "index.html": "/URI.CS16.TeoriaDasFilas/index.html",
+    "precache-manifest.187aaf10aebe5d2f760f4c37af19c2a1.js": "/URI.CS16.TeoriaDasFilas/precache-manifest.187aaf10aebe5d2f760f4c37af19c2a1.js",
+    "service-worker.js": "/URI.CS16.TeoriaDasFilas/service-worker.js",
+    "static/js/2.34c9692a.chunk.js.LICENSE.txt": "/URI.CS16.TeoriaDasFilas/static/js/2.34c9692a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc911ffb.js",
+    "static/js/2.34c9692a.chunk.js",
+    "static/js/main.652a4771.chunk.js"
+  ]
+}
