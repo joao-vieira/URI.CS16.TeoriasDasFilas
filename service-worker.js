@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/URI.CS16.TeoriaDasFilas/precache-manifest.4620919bd8d8d83e748116185fc1af41.js"
+  "/URI.CS16.TeoriaDasFilas/precache-manifest.2b0b54b152ec13000498bb59ab182862.js"
 );
 
 self.addEventListener('message', (event) => {
